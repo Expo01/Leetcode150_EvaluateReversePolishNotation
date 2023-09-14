@@ -17,8 +17,7 @@ class Solution {
             if(s.equals("+") || s.equals("*") || s.equals("/") || s.equals("-")){
                 int b = st2.pop();
                 int a = st2.pop();
-                int res = cal(a, b, s.charAt(0));
-                st2.push(res);
+                st2.push(cal(a, b, s.charAt(0))); // eliminated local variable and returned directly
 
             } else {
                 st2.push(Integer.parseInt(s));
